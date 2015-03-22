@@ -21,7 +21,7 @@ class ReviewsController < Spree::BaseController
     @review.user = current_user if user_signed_in?
     @review.ip_address = request.remote_ip
     
-    authorize! :create, @review
+    #authorize! :create, @review
     
     if @review.save
       flash[:notice] = t('review_successfully_submitted')
